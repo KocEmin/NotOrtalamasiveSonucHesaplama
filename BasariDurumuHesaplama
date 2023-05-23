@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class NotOrtalamasi {
+    public static void main(String[] args) {
+        int mat1,mat2,fizik1,fizik2,kimya1,kimya2,turkce1,turkce2,bio1,bio2;
+
+        Scanner inp = new Scanner(System.in);
+
+        System.out.println("Not Ortalamanızın Hesaplanması için İstenilen Bilgileri Giriniz");
+
+        System.out.print("Matemetik Vize Notunuz :");
+        mat1 = inp.nextInt();
+
+        System.out.print("Matemetik Final Notunuz :");
+        mat2 = inp.nextInt();
+
+        System.out.print("Türkçe Vize Notunuz :");
+        turkce1 = inp.nextInt();
+
+        System.out.print("Türkçe Final Notunuz :");
+        turkce2 = inp.nextInt();
+
+        System.out.print("Fizik Vize Notunuz :");
+        fizik1 = inp.nextInt();
+
+        System.out.print("Fizik Final Notunuz :");
+        fizik2 = inp.nextInt();
+
+        System.out.print("Kimya Vize Notunuz :");
+        kimya1 = inp.nextInt();
+
+        System.out.print("Kimya Final Notunuz :");
+        kimya2 = inp.nextInt();
+
+        System.out.print("Biyoloji Vize Notunuz :");
+        bio1 = inp.nextInt();
+
+        System.out.print("Biyoloji Final Notunuz :");
+        bio2 = inp.nextInt();
+
+        int toplam = (mat1+mat2+turkce1+turkce2+fizik1+fizik2+kimya1+kimya2+bio1+bio2);
+        double ortalama= toplam/10.0;
+
+        System.out.println("Not Ortalamanız :"+ortalama);
+
+        String sonuc = (ortalama < 60) ? "BAŞARISIZ - Sınıf Tekrarı" : "BAŞARILI";
+        System.out.printf("Başarı Durumu : " + sonuc);
+
+
+    }
+}
